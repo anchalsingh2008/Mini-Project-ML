@@ -1,0 +1,19 @@
+3####### correct word #######
+from textblob import TextBlob
+import re
+
+x=input("Enter the string")
+new_doc = TextBlob(x)
+
+result = new_doc.correct()
+print(result)
+######
+
+
+##### Give word and get the related example #####
+from nltk.corpus import wordnet
+syn = wordnet.synsets("cool")
+print(syn[0].definition())
+print(syn[0].examples())
+####
+
