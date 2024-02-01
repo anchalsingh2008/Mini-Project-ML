@@ -1,0 +1,23 @@
+import nltk
+nltk.download()
+data = "ducat is very good python training company. radha is very bad girl. sonu is very happy. mohan is very sad.today ramu is very late"
+
+from nltk.tokenize import sent_tokenize, word_tokenize
+s=sent_tokenize(data)
+from nltk.tokenize import sent_tokenize, word_tokenize
+s=sent_tokenize(data)
+s
+
+neg=0
+pos=0
+for i in s:
+    score=sid.polarity_scores(i)
+    if score["neg"]!=0:
+        neg=neg+1
+        print(i,"---->neg")
+    else:
+        pos=pos+1
+        print(i,"---->pos")
+
+print("pos",pos)
+print("neg",neg)
