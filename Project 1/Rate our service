@@ -1,0 +1,16 @@
+import nltk
+nltk.download()
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import nltk
+
+user_input=input("please Rate our Services")
+
+sid=SentimentIntensityAnalyzer()
+score=sid.polarity_scores(user_input)
+
+print(score)
+
+if score["neg"]!=0:
+    print("Negative")
+else:
+    print("Positive")
